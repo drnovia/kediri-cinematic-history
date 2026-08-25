@@ -1,0 +1,110 @@
+export const artifacts = [
+  {
+    id: "prasasti-hantang",
+    title: "Prasasti Hantang (Ngantang)",
+    category: "prasasti",
+    year: "1135 M (1057 Saka)",
+    material: "Batu Andesit Hitam",
+    location: "Museum Nasional Indonesia, Jakarta (No. D.9)",
+    descId: "Prasasti beraksara Jawa Kuna peninggalan Raja Jayabaya yang memuat lambang Kerajaan Kadiri (Garudamukhalancana) dan semboyan 'Panjalu Jayati' (Panjalu Menang) atas anugerah pembebasan pajak bagi warga desa Hantang yang setia dalam perang saudara.",
+    descEn: "Old Javanese andesite stone inscription from King Jayabaya bearing the royal emblem Garudamukhalancana and the motto 'Panjalu Jayati' (Panjalu Triumphs), granting tax exemption to loyal Hantang villagers.",
+    significance: "Bukti tertulis paling autentik atas kejayaan militer dan politik Kerajaan Panjalu/Kadiri di bawah Prabu Jayabaya.",
+    svgType: "stele"
+  },
+  {
+    id: "prasasti-pamwatan",
+    title: "Prasasti Pamwatan",
+    category: "prasasti",
+    year: "1042 M (964 Saka)",
+    material: "Batu Andesit",
+    location: "Museum Airlangga, Kediri",
+    descId: "Prasasti yang dikeluarkan oleh Maharaja Sri Lokeswara Dharmawangsa Airlangga Anantawikramottunggadewa, mencatat pemindahan pusat ibukota ke Dahanapura (Daha) sebelum pembagian kerajaan menjadi Panjalu dan Janggala.",
+    descEn: "Royal charter issued by King Airlangga recording the transfer of the capital to Dahanapura (Daha) prior to the partition of his kingdom into Panjalu and Janggala.",
+    significance: "Titik tolak kronologis lahirnya pusat kekuasaan Daha di tepi Sungai Brantas.",
+    svgType: "stele"
+  },
+  {
+    id: "kendi-tirtha",
+    title: "Kendi Tirtha Suci Garudamukha",
+    category: "prasasti",
+    year: "Abad 11 - 12 M",
+    material: "Terakota / Perunggu Berukir",
+    location: "Museum Airlangga, Kediri",
+    descId: "Wadah air suci perunggu berukir figur Garudeya pembawa Tirtha Amerta. Digunakan dalam ritual pentahbisan dan penyucian air di sepanjang aliran Sungai Brantas pada masa Kadiri Kuno.",
+    descEn: "Bronze holy water vessel carved with the figure of Garuda bearing the Elixir of Immortality (Amrita), used for royal purification rites along the Brantas River.",
+    significance: "Simbol kosmologi air dan legitimasi religius wangsa Isyana di Kadiri.",
+    svgType: "vessel"
+  },
+  {
+    id: "kakawin-bharatayuddha",
+    title: "Naskah Kakawin Bharatayuddha",
+    category: "manuscript",
+    year: "1157 M (1079 Saka)",
+    material: "Daun Lontar (Kropak)",
+    location: "Perpustakaan Nasional RI / Koleksi Merapi-Merbabu",
+    descId: "Karya sastra agung Jawa Kuna gubahan Mpu Sedah yang diselesaikan oleh Mpu Panuluh. Menceritakan perang saudara Bharatayuddha sebagai kiasan kemenangan Prabu Jayabaya menyatukan kembali Jenggala dan Kadiri.",
+    descEn: "Masterpiece of Old Javanese literature by court poets Mpu Sedah and Mpu Panuluh, metaphorically depicting King Jayabaya's reunification of Janggala and Kadiri.",
+    significance: "Karya puncak puisi wiracarita Jawa Kuno era klasik Panjalu.",
+    svgType: "scroll"
+  },
+  {
+    id: "serat-jangka-jayabaya",
+    title: "Naskah Serat Jangka Jayabaya",
+    category: "manuscript",
+    year: "Abad 18 - 19 M (Salinan Keraton)",
+    material: "Kertas Daluang Kuno",
+    location: "Museum Sonobudoyo & Sasana Pustaka Karaton Surakarta",
+    descId: "Naskah tembang macapat berisi ramalan profetik yang diatribusikan kepada Prabu Jayabaya mengenai siklus zaman di Nusantara (Kalatidha, Ratu Adil, hingga era kereta tanpa kuda dan perahu terbang di angkasa).",
+    descEn: "Manuscript of prophetic verses attributed to King Jayabaya predicting cycles of history, the arrival of the Just King (Ratu Adil), horseless carriages, and flying vessels.",
+    significance: "Karya filsafat kosmologis dan ramalan paling terkenal dalam memori kolektif masyarakat Jawa.",
+    svgType: "book"
+  },
+  {
+    id: "blueprint-jembatan-1869",
+    title: "Cetak Biru Brug Over den Brantas (1869)",
+    category: "colonial",
+    year: "1868 - 1869 M",
+    material: "Kertas Kalkir & Arsip Kolonial Koloniën",
+    location: "Nationaal Archief Den Haag & Arsip Pemkot Kediri",
+    descId: "Gambar teknik orisinal konstruksi jembatan besi tempa rancangan insinyur Paul Pierre Roux dengan sistem sambungan paku keling (riveted truss) untuk mengatasi bentang 160 meter di atas arus banjir musiman Sungai Brantas.",
+    descEn: "Original engineering blueprints of the wrought-iron riveted truss bridge designed by Paul Pierre Roux to span 160 meters across the Brantas floodplains.",
+    significance: "Mahakarya teknik sipil kolonial abad ke-19 yang masih difungsikan hingga sekarang.",
+    svgType: "blueprint"
+  },
+  {
+    id: "alkitab-belanda-1867",
+    title: "Alkitab Kuno Belanda (Statenvertaling 1867)",
+    category: "colonial",
+    year: "1867 M",
+    material: "Kertas Kulit, Sampul Kulit Sapi Embos Emas & Grendel Perunggu",
+    location: "GPIB Immanuel (Gereja Merah), Kediri",
+    descId: "Kitab Suci kuno terjemahan Statenvertaling yang dicetak di Belanda tahun 1867 dan dibawa oleh para misionaris pendahulu. Tersimpan rapi di dalam ruang sakristi Gereja Merah Kediri dan masih dalam kondisi utuh terawat.",
+    descEn: "Antique Dutch Statenvertaling Bible printed in the Netherlands in 1867 with gilded leather binding and bronze clasps, preserved in the Red Church sanctuary.",
+    significance: "Arsip liturgis tertua di Kota Kediri yang menjadi saksi sejarah toleransi dan penyebaran agama.",
+    svgType: "book"
+  },
+  {
+    id: "foto-stasiun-kediri-1897",
+    title: "Foto Arsip Jalur Kereta Api & Trem OJS (1897)",
+    category: "colonial",
+    year: "1897 M",
+    material: "Plat Kaca & Cetakan Perak Albumin",
+    location: "Tropenmuseum / Wereldmuseum Amsterdam (No. TM-60002134)",
+    descId: "Foto arsip masa Hindia Belanda yang menampilkan jaringan trem uap Oost-Java Stoomtram Maatschappij (OJS) dan jalur Staatsspoorwegen yang menghubungkan pabrik-pabrik gula Kediri ke pelabuhan Surabaya.",
+    descEn: "Late 19th-century colonial photograph showing the steam tram network and Staatsspoorwegen rail lines linking Kediri's sugar estates to Surabaya Harbor.",
+    significance: "Bukti visual lompatan revolusi logistik dan industrialisasi Kediri abad ke-19.",
+    svgType: "photo"
+  },
+  {
+    id: "vintage-kretek-label",
+    title: "Label Kemasan Kretek Vintage (1958)",
+    category: "colonial",
+    year: "1958 - 1960 M",
+    material: "Kertas Litografi Warna",
+    location: "Arsip Koleksi Industri Budaya Jawa Timur",
+    descId: "Kemasan bersejarah generasi awal industri rokok kretek linting tangan khas Kediri dengan ilustrasi bangunan gudang garam di tepi rel kereta api, menandai bangkitnya industri kretek nasional pasca kemerdekaan.",
+    descEn: "Historic vintage packaging label from the nascent hand-rolled kretek cigarette industry in Kediri, symbolizing post-independence manufacturing growth.",
+    significance: "Ikon transformasi Kediri menjadi salah satu pusat industri manufaktur terbesar di Indonesia.",
+    svgType: "label"
+  }
+];

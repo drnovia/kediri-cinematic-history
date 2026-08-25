@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0c10" />
+    <meta name="description" content="Kediri - sebuah perjalanan sinematik menembus sejarah, kerajaan Panjalu, sungai Brantas, arsitektur kolonial, industri, dan ingatan masa depan." />
+    <meta property="og:title" content="Kediri - A Century of History, Kings, and Industry" />
+    <meta property="og:description" content="Digital museum sinematik dan arsip interaktif tentang lapisan peradaban Kediri." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0c10'/><text x='50' y='70' font-size='60' font-family='serif' fill='%23c5a059' text-anchor='middle'>K</text></svg>" />
+    <title>Kediri - A Century of History, Kings, and Industry</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Lewati ke isi</a>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" aria-hidden="true">
+      <div class="loading-mark">K</div>
+      <div class="loading-line"><span></span></div>
+      <p id="loading-text">MEMBUKA ARSIP KEDIRI</p>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Kembali ke awal">
+        <span class="brand-symbol">K</span>
+        <span class="brand-copy"><strong>KEDIRI</strong><small id="brand-sub">ARSIP SINEMATIK</small></span>
+      </a>
+
+      <!-- Quick Nav Links for Desktop -->
+      <nav class="header-nav-links" aria-label="Navigasi Cepat Museum">
+        <a href="#chapter-01" class="header-nav-link"><span>01</span> Linimasa</a>
+        <a href="#section-heritage-map" class="header-nav-link"><span>02</span> Peta Situs</a>
+        <a href="#section-archive-vault" class="header-nav-link"><span>03</span> Galeri Arsip</a>
+        <a href="#section-aksara" class="header-nav-link"><span>04</span> Aksara & Nubuat</a>
+        <a href="#section-curator-quiz" class="header-nav-link"><span>05</span> Uji Kurator</a>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Ambient Soundscape Toggle Button -->
+        <button type="button" class="audio-toggle-btn" aria-label="Aktifkan Suara Ambien" aria-pressed="false">
+          <div class="audio-bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <span class="audio-btn-label">Suara Ambien</span>
+        </button>
+
+        <!-- Bilingual Switcher (ID / EN) -->
+        <button type="button" class="lang-switch-btn" id="lang-switch-btn" aria-label="Ganti Bahasa / Switch Language">
+          <span class="lang-code is-active">ID</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-code">EN</span>
+        </button>
+
+        <!-- Help / Keyboard Shortcuts Button -->
+        <button type="button" class="btn-help-shortcuts" id="btn-help-shortcuts" aria-label="Panduan Tombol Pintas" title="Tombol Pintas (?)">
+          ?
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span></span><span></span><span></span>
+          <b>MENU</b>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="site-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <span class="eyebrow">THE BRANTAS FLOW / NAVIGASI</span>
+        <nav class="mobile-links" aria-label="Navigasi bab mobile">
+          <a href="#chapter-01">01 <span>1042 / Daha & Airlangga</span></a>
+          <a href="#chapter-02">02 <span>1135 / Panjalu Jayati</span></a>
+          <a href="#chapter-03">03 <span>1222 / Palagan Ganter</span></a>
+          <a href="#chapter-04">04 <span>Layers / Setono Gedong</span></a>
+          <a href="#chapter-05">05 <span>1869 / Brug Over den Brantas</span></a>
+          <a href="#chapter-06">06 <span>1904 / Gereja Merah</span></a>
+          <a href="#chapter-07">07 <span>1958 / Industri & Dhoho</span></a>
+          <a href="#section-heritage-map" class="mobile-highlight-link">📍 <span>Peta Cagar Budaya</span></a>
+          <a href="#section-archive-vault" class="mobile-highlight-link">📜 <span>Galeri Arsip Digital</span></a>
+          <a href="#section-aksara" class="mobile-highlight-link">ꦏ <span>Aksara & Ramalan</span></a>
+          <a href="#section-curator-quiz" class="mobile-highlight-link">👑 <span>Tantangan Kurator</span></a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- The Brantas Flow Side Navigation Track -->
+    <aside class="river-nav" aria-label="Navigasi The Brantas Flow">
+      <div class="river-nav-label">THE BRANTAS FLOW</div>
+      <svg class="river-svg" viewBox="0 0 100 900" preserveAspectRatio="none" aria-hidden="true">
+        <path class="river-track" d="M49 0 C19 80 73 140 47 220 C21 302 81 368 54 444 C25 525 72 603 41 675 C20 725 66 790 47 900" />
+        <path class="river-progress" d="M49 0 C19 80 73 140 47 220 C21 302 81 368 54 444 C25 525 72 603 41 675 C20 725 66 790 47 900" />
+      </svg>
+      <nav class="chapter-markers">
+        <a class="chapter-marker is-active" href="#chapter-01" data-chapter="chapter-01"><i></i><span>1042 / DAHA</span></a>
+        <a class="chapter-marker" href="#chapter-02" data-chapter="chapter-02"><i></i><span>1135 / PANJALU</span></a>
+        <a class="chapter-marker" href="#chapter-03" data-chapter="chapter-03"><i></i><span>1222 / GANTER</span></a>
+        <a class="chapter-marker" href="#chapter-04" data-chapter="chapter-04"><i></i><span>LAYERS / GEDONG</span></a>
+        <a class="chapter-marker" href="#chapter-05" data-chapter="chapter-05"><i></i><span>1869 / BRIDGE</span></a>
+        <a class="chapter-marker" href="#chapter-06" data-chapter="chapter-06"><i></i><span>1904 / GEREJA</span></a>
+        <a class="chapter-marker" href="#chapter-07" data-chapter="chapter-07"><i></i><span>1958 / INDUSTRY</span></a>
+      </nav>
+    </aside>
+
+    <div class="mobile-progress" aria-hidden="true"><span></span></div>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero" id="top">
+        <div class="hero-noise"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-river-glow"></div>
+        
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow" id="hero-eyebrow">A DIGITAL MUSEUM / JAWA TIMUR</p>
+          <h1 id="hero-title">
+            <span id="hero-title-main">KEDIRI</span>
+            <em id="hero-title-sub1">A CENTURY OF</em>
+            <em id="hero-title-sub2">HISTORY, KINGS,</em>
+            <em id="hero-title-sub3">AND INDUSTRY</em>
+          </h1>
+          <div class="hero-footer">
+            <p id="hero-lead">Sebuah perjalanan melintasi peradaban kuno, takhta kerajaan, bentang sungai, revolusi industri, dan konektivitas modern.</p>
+            <div class="hero-cta-group">
+              <a class="enter-link" href="#chapter-01">
+                <span id="hero-scroll-enter">GULIR UNTUK MEMASUKI</span>
+                <i>↓</i>
+              </a>
+              <a class="quick-map-link" href="#section-heritage-map">
+                <span>📍 Peta Cagar Budaya</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-year">
+          <span id="hero-year-val">1042</span>
+          <small id="hero-year-label">JEJAK PERTAMA</small>
+        </div>
+        <div class="hero-side-note">
+          BRANTAS<br />RIVER<br />
+          <span id="hero-coords-text">07°49' S / 112°01' E</span>
+        </div>
+      </section>
+
+      <!-- Section 00: Orientation -->
+      <section class="intro-section section-dark" id="chapter-00">
+        <div class="section-intro-grid">
+          <div class="section-index">00 <span>/</span> ORIENTASI</div>
+          <div class="intro-copy reveal-up">
+            <p class="eyebrow" id="intro-eyebrow">BENANG MERAH YANG TERSISA</p>
+            <h2 id="intro-heading">Sejarah tidak tinggal<br /><i>di belakang.</i></h2>
+            <p class="body-copy" id="intro-body">Ia mengendap di tepi sungai, di antara batu bata, pada bunyi mesin, dan di dalam nama-nama yang terus diucapkan. Kediri dibaca di sini sebagai lapisan: kerajaan, konflik, teknik, industri, dan ingatan yang hidup bersamaan.</p>
+          </div>
+          <div class="intro-stat-col reveal-up">
+            <div class="stat-card">
+              <strong id="intro-stat1-num">1042</strong>
+              <span id="intro-stat1-label">AWAL KERAJAAN DAHA</span>
+            </div>
+            <div class="stat-card">
+              <strong id="intro-stat2-num">160M</strong>
+              <span id="intro-stat2-label">BENTANG JEMBATAN BESI 1869</span>
+            </div>
+            <div class="stat-card">
+              <strong id="intro-stat3-num">12+</strong>
+              <span id="intro-stat3-label">SITUS CAGAR BUDAYA UTAMA</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-line">
+          <span></span><b>THE BRANTAS FLOW</b><span></span>
+        </div>
+      </section>
+
+      <!-- Chapter 01: 1042 Daha & Airlangga -->
+      <section class="chapter chapter-one" id="chapter-01" data-era="history">
+        <div class="chapter-topline">
+          <span>CHAPTER 01</span>
+          <span>HISTORY / ORIGIN</span>
+        </div>
+        <div class="chapter-one-grid">
+          <div class="chapter-copy reveal-up">
+            <p class="eyebrow">SEBUAH NAMA, SEBUAH PUSAT KEKUASAAN</p>
+            <h2><span>1042</span>KOTA API<br />YANG LAHIR<br />DARI AIR</h2>
+            <p class="chapter-lead">Daha — atau Dahanapura dalam tradisi literer Jawa Kuno — hadir sebagai pusat kosmologis kerajaan Panjalu setelah pembagian takhta oleh Raja Airlangga. Sungai Brantas menjadi arteri utama kehidupan, pertahanan, dan perniagaan maritim pedalaman.</p>
+            <div class="chapter-note">
+              <span class="note-line"></span>
+              <p>Prasasti Pamwatan (1042 M) dan Prasasti Turun Hyang (1044 M) mencatat dinamika pembagian wilayah antara Panjalu (Kadiri) dan Janggala yang dibatasi secara mistis dan geografis oleh Sungai Brantas.</p>
+            </div>
+          </div>
+          <div class="origin-map visual-frame reveal-scale">
+            <div class="map-caption">
+              <span>FIG. 01 / DAHA & PANJALU</span>
+              <span>REKONSTRUKSI KARTOGRAFI HISTORIS</span>
+            </div>
+            <svg viewBox="0 0 620 600" role="img" aria-label="Ilustrasi peta abstrak pembagian wilayah Panjalu dan Janggala">
+              <defs>
+                <filter id="paper-noise">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+                  <feColorMatrix type="saturate" values="0"/>
+                  <feComponentTransfer><feFuncA type="table" tableValues="0 0.06"/></feComponentTransfer>
+                </filter>
+              </defs>
+              <rect width="620" height="600" fill="#17191b"/>
+              <rect width="620" height="600" filter="url(#paper-noise)" opacity=".6"/>
+              <path class="map-contour" d="M45 65 C130 15 212 98 297 55 S472 41 574 100 M20 134 C105 104 205 168 292 126 S458 106 602 164 M2 470 C115 405 170 526 277 465 S480 420 626 500 M60 555 C140 492 238 580 352 524 S490 502 588 555"/>
+              <path class="map-river" d="M318 -20 C300 80 354 134 320 223 C290 301 375 342 335 428 C302 500 360 544 335 630"/>
+              <path class="map-split" d="M35 317 C150 258 226 288 315 305 C407 322 492 309 590 268"/>
+              <g class="map-labels">
+                <text x="74" y="210">PANJALU</text>
+                <text x="420" y="210">JANGGALA</text>
+                <text x="270" y="285" class="map-small">BRANTAS</text>
+                <text x="286" y="352" class="map-daha">DAHA</text>
+              </g>
+              <g class="kendi">
+                <path d="M292 372 h56 l-8 93 q-20 25-40 0z"/>
+                <path d="M300 373 q20-26 40 0"/>
+                <ellipse cx="320" cy="466" rx="29" ry="7"/>
+              </g>
+              <circle class="map-pulse" cx="320" cy="419" r="42"/>
+              <text class="map-coord" x="70" y="540">SACRED WATER / AIRLANGGA CONTINUUM</text>
+            </svg>
+          </div>
+        </div>
+        <div class="chapter-bottomline">
+          <span>DAHA / DAKSHA / PUSAT SELATAN</span>
+          <span>GULIR UNTUK MELANJUTKAN</span>
+        </div>
+      </section>
+
+      <!-- Chapter 02: 1135 Panjalu Jayati -->
+      <section class="chapter chapter-two" id="chapter-02" data-era="history">
+        <div class="chapter-topline">
+          <span>CHAPTER 02</span>
+          <span>COURT / TEXT / POWER</span>
+        </div>
+        <div class="horizontal-intro">
+          <p class="eyebrow">KETIKA KERATON MENCATAT ZAMAN</p>
+          <h2>PANJALU <i>JAYATI</i></h2>
+          <p>Semboyan kemenangan pada Prasasti Hantang (1135 M) di era Prabu Jayabaya menjadi puncak kejayaan sastra Jawa Kuna. Teks, kakawin, dan ramalan menjadi bentuk kekuasaan yang abadi.</p>
+        </div>
+        <div class="horizontal-stage">
+          <div class="horizontal-track">
+            <article class="timeline-panel panel-quote">
+              <span class="panel-number">02 / 01</span>
+              <p class="script-word">Panjalu</p>
+              <div class="panel-caption">
+                <b>THE NAME IN MOTION</b>
+                <span>1135 - 1159 / COURTLY MEMORY</span>
+              </div>
+            </article>
+            <article class="timeline-panel panel-inscription">
+              <span class="panel-number">02 / 02</span>
+              <div class="inscription-mark">ꦥꦚ꧀ꦗꦭꦸ</div>
+              <p class="inscription-copy">Sebuah kerajaan juga dibangun oleh teks: prasasti batu andesit, Kakawin Bharatayuddha oleh Mpu Sedah & Panuluh, dan Cerita Panji yang melegenda.</p>
+              <div class="panel-caption">
+                <b>TEXT AS TERRITORY</b>
+                <span>PRASASTI / SASTRA / AKSARA</span>
+              </div>
+            </article>
+            <article class="timeline-panel panel-jayabaya">
+              <span class="panel-number">02 / 03</span>
+              <div class="giant-year">1150<span>±</span></div>
+              <p>Prabu Sri Aji Jayabaya menjadi sosok bertingkat: raja adil dalam catatan sejarah, pelindung sastra, dan figur profetik dalam tradisi Jangka Jayabaya.</p>
+              <div class="panel-caption">
+                <b>SEPARATE THE RECORD FROM THE LEGEND</b>
+                <span>JAYABAYA / A LAYERED MEMORY</span>
+              </div>
+            </article>
+            <article class="timeline-panel panel-panji">
+              <span class="panel-number">02 / 04</span>
+              <div class="panji-ring">
+                <span>IN<br />NU</span>
+                <span>GALUH</span>
+              </div>
+              <p>Kisah Panji (Inu Kertapati & Sekartaji) lahir dari bumi Kediri dan melanglang buana hingga Siam, Kamboja, dan Semenanjung Melayu.</p>
+              <div class="panel-caption">
+                <b>THE STORY TRAVELS</b>
+                <span>JAVA / BALI / SOUTHEAST ASIA</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="horizontal-hint">
+          <span class="hint-arrow">→</span>
+          <span>VERTICAL SCROLL / HORIZONTAL MEMORY</span>
+        </div>
+      </section>
+
+      <!-- Aksara Jawa & Jayabaya Prophecy Interactive Tool Section -->
+      <section class="chapter-section-interactive" id="section-aksara">
+        <div id="aksara-tool-root"></div>
+      </section>
+
+      <!-- Chapter 03: 1222 Palagan Ganter -->
+      <section class="chapter chapter-three" id="chapter-03" data-era="conflict">
+        <div class="battle-cloud"></div>
+        <div class="ash-field"></div>
+        <div class="chapter-topline">
+          <span>CHAPTER 03</span>
+          <span>CONFLICT / TRANSITION</span>
+        </div>
+        <div class="battle-layout">
+          <div class="battle-copy reveal-up">
+            <p class="eyebrow">KETIKA PUSAT KEKUASAAN BERGESER</p>
+            <h2><span>1222</span>PALAGAN<br /><i>GANTER</i></h2>
+            <p class="chapter-lead">Kekalahan Raja Kertajaya (Dandang Gendis) di tangan Ken Arok (Sri Ranggah Rajasa) pada pertempuran legendaris di Ganter (1222 M) menandai berakhirnya era hegemoni Panjalu dan berseminya wangsa Rajasa di Singhasari.</p>
+            <div class="battle-tag">
+              HISTORIKA / 1222 M<br />
+              <small>TRANSISI KEKUASAAN DI JAWA TIMUR</small>
+            </div>
+          </div>
+          <div class="battle-figure visual-frame">
+            <div class="figure-halo"></div>
+            <svg viewBox="0 0 360 580" role="img" aria-label="Siluet figur Raja Kertajaya dalam kabut pertempuran">
+              <path class="figure-silhouette" d="M192 78 q-26-25-59 4 l-8 66 -22 55 15 133 -40 136 69 38 42-142 28 136 81-28-57-144 15-147-42-46z"/>
+              <path class="figure-cape" d="M132 206 q110 28 128 208 l-60 71 -63-80z"/>
+              <path class="figure-spear" d="M246 80 L203 538"/>
+            </svg>
+            <span class="figure-label">KERTAJAYA<br /><small>THE LAST KING OF KADIRI</small></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter 04: Layers of Civilization (Setono Gedong) -->
+      <section class="chapter chapter-four" id="chapter-04" data-era="layers">
+        <div class="chapter-topline">
+          <span>CHAPTER 04</span>
+          <span>HERITAGE / STRATIGRAPHY</span>
+        </div>
+        <div class="layers-header">
+          <p class="eyebrow">SETONO GEDONG</p>
+          <h2>LAPISAN<br /><i>PERADABAN</i></h2>
+          <p>Sejarah tidak menghapus pendahulunya; ia menumpuk. Di Setono Gedong, sisa-sisa relief candi Hindu-Buddha abad ke-12 menjadi fondasi makam wali Islam era transisi, menciptakan ruang memori yang terus hidup.</p>
+        </div>
+        
+        <div class="layers-stack" aria-label="Ilustrasi lapisan arsitektur dan ingatan">
+          <div class="layer-card layer-top">
+            <span>04 / 03</span>
+            <strong>THE LIVING HERITAGE</strong>
+            <em>Masa Kini / Ziarah, Budaya & Ruang Publik</em>
+            <div class="layer-pattern pattern-top"></div>
+          </div>
+          <div class="layer-card layer-middle">
+            <span>04 / 02</span>
+            <strong>THE ISLAMIC TRANSITION</strong>
+            <em>Abad 15-16 / Makam Syaikh Wasil & Gapura</em>
+            <div class="layer-pattern pattern-middle"></div>
+          </div>
+          <div class="layer-card layer-bottom">
+            <span>04 / 01</span>
+            <strong>THE ANCIENT SUBSTRATE</strong>
+            <em>Abad 11-13 / Balok Candi & Arca Garudeya</em>
+            <div class="layer-pattern pattern-bottom"></div>
+          </div>
+          <div class="layers-core">
+            <span>SEJARAH</span>
+            <i></i>
+            <span>BERTUMPUK</span>
+          </div>
+        </div>
+
+        <!-- 3D Stratigraphy Inspector Widget -->
+        <div id="layers-inspector-root"></div>
+
+        <div class="layers-footer">
+          <span>NOT REPLACEMENT / LIVING CONTINUITY</span>
+          <button class="source-trigger" type="button" data-source="heritage">BACA CATATAN SUMBER <i>↗</i></button>
+        </div>
+      </section>
+
+      <!-- Chapter 05: 1869 Brug Over den Brantas (Jembatan Lama) -->
+      <section class="chapter chapter-five" id="chapter-05" data-era="engineering">
+        <div class="blueprint-grid"></div>
+        <div class="chapter-topline">
+          <span>CHAPTER 05</span>
+          <span>ENGINEERING / COLONIAL TRUSS</span>
+        </div>
+        <div class="bridge-heading">
+          <p class="eyebrow">BRUG OVER DEN BRANTAS TE KEDIRI</p>
+          <h2><span>1869</span>JEMBATAN BESI<br /><i>PERTAMA</i></h2>
+          <p>Diresmikan pada 18 Maret 1869 karya insinyur Paul Pierre Roux, Jembatan Lama Kediri adalah mahakarya konstruksi besi tempa (groove-iron truss) sepanjang 160 meter yang membelah arus Sungai Brantas.</p>
+        </div>
+        <div class="bridge-blueprint visual-frame">
+          <div class="blueprint-label top-label">IRON BRIDGE / KEDIRI CITY</div>
+          <div class="blueprint-label bottom-label">DRAWING 05 / 1869 / 160 M</div>
+          <svg class="bridge-svg" viewBox="0 0 1200 520" role="img" aria-label="Ilustrasi blueprint Jembatan Lama Kediri">
+            <g class="bridge-water">
+              <path d="M0 390 Q180 356 360 392 T720 390 T1200 394"/>
+              <path d="M0 427 Q180 393 360 429 T720 427 T1200 431"/>
+              <path d="M0 465 Q180 431 360 467 T720 465 T1200 469"/>
+            </g>
+            <g class="bridge-structure">
+              <path d="M80 312 H1120"/>
+              <path d="M80 322 H1120"/>
+              <path d="M180 312 V170 M180 322 V170 M1020 312 V170 M1020 322 V170"/>
+              <path d="M180 170 Q600 45 1020 170"/>
+              <path d="M180 186 Q600 62 1020 186"/>
+              <path d="M285 142 V312 M382 115 V312 M480 93 V312 M600 78 V312 M720 93 V312 M818 115 V312 M915 142 V312"/>
+              <path d="M116 312 L180 170 M1084 312 L1020 170"/>
+            </g>
+            <g class="bridge-dimensions">
+              <path d="M180 350 H1020"/>
+              <path d="M180 342 V358 M1020 342 V358"/>
+              <text x="552" y="373">160 M</text>
+              <path d="M1036 170 V312"/>
+              <path d="M1028 170 H1044 M1028 312 H1044"/>
+              <text x="1054" y="248">7.5 M</text>
+            </g>
+          </svg>
+
+          <!-- Interactive Blueprint Hotspots -->
+          <div id="bridge-inspector-root"></div>
+        </div>
+        <div class="bridge-footer">
+          <div>
+            <span class="cyan-dot"></span>
+            <b>FAKTA SEJARAH</b>
+            <p>Jembatan dibuka untuk umum pada 18 Maret 1869, menurut catatan resmi Pemkot Kediri dan Bank Indonesia.</p>
+          </div>
+          <button class="source-trigger" type="button" data-source="bridge">BUKA CATATAN SUMBER <i>↗</i></button>
+        </div>
+      </section>
+
+      <!-- Chapter 06: 1904 GPIB Immanuel Gereja Merah -->
+      <section class="chapter chapter-six" id="chapter-06" data-era="architecture">
+        <div class="ash-wipe"></div>
+        <div class="chapter-topline">
+          <span>CHAPTER 06</span>
+          <span>ARCHITECTURE / FAITH</span>
+        </div>
+        <div class="church-layout">
+          <div class="church-copy reveal-up">
+            <p class="eyebrow">GPIB IMMANUEL / GEREJA MERAH</p>
+            <h2><span>1904</span>BATA MERAH<br /><i>ABADI</i></h2>
+            <p class="chapter-lead">Sebuah prasasti di dinding menyimpan tanggal peletakan batu pertama: 21 Desember 1904. Arsitektur Neo-Gothic hadir sebagai garis tegak, bata merah tanpa plester, dan memori toleransi yang terus berlanjut. Di dalamnya tersimpan Alkitab kuno berbahasa Belanda berangka tahun 1867.</p>
+            <div class="church-note">
+              <b>BATA MERAH / KACA PATRI / SEJARAH</b>
+              <span>IKON KOTA SEJAK 1904</span>
+            </div>
+          </div>
+          <div class="church-drawing visual-frame">
+            <svg viewBox="0 0 560 620" role="img" aria-label="Ilustrasi garis arsitektur Gereja Immanuel Kediri">
+              <g class="church-lines">
+                <path d="M96 548 V256 L178 170 V78 H250 V170 L280 135 L310 170 V78 H382 V170 L464 256 V548"/>
+                <path d="M70 548 H490 M118 548 V302 H442 V548 M180 548 V360 H380 V548"/>
+                <path d="M178 170 L280 252 L382 170 M208 203 V548 M352 203 V548"/>
+                <path d="M238 78 H322 M250 78 V40 H310 V78"/>
+                <path d="M280 40 V18"/>
+                <path d="M220 360 Q280 270 340 360 M220 548 V360 M340 548 V360"/>
+              </g>
+              <g class="church-brick">
+                <path d="M115 305 H445 M115 330 H445 M115 355 H445 M115 380 H445 M115 405 H445 M115 430 H445 M115 455 H445 M115 480 H445 M115 505 H445"/>
+              </g>
+            </svg>
+            <span class="church-stamp">DE EERSTE STEEN GELEGD<br /><b>21 DEC 1904</b></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chapter 07: 1958 - Present: Industry & Connectivity -->
+      <section class="chapter chapter-seven" id="chapter-07" data-era="industry">
+        <div class="industry-grid"></div>
+        <div class="chapter-topline">
+          <span>CHAPTER 07</span>
+          <span>INDUSTRY / CONNECTIVITY</span>
+        </div>
+        <div class="industry-heading">
+          <p class="eyebrow">1958 → SEKARANG</p>
+          <h2>KOTA YANG<br /><i>TERUS BERPUTAR</i></h2>
+          <p>Dari pabrik gula tebu kolonial (PG Pesantren Baru & Meritjan), denyut manufaktur tembakau (1958), hingga gerbang udara internasional Bandara Dhoho (2024), Kediri membuktikan sungai dan daratannya selalu menjadi episentrum pergerakan Jawa Timur.</p>
+        </div>
+        <div class="industry-scene visual-frame">
+          <div class="gear gear-large"></div>
+          <div class="gear gear-small"></div>
+          <div class="factory-line">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="industry-road">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="runway-mark">DHOHO / DHX AIRPORT</div>
+          <div class="industry-stat">
+            <strong>01</strong>
+            <span>INDUSTRI<br />MANUFAKTUR</span>
+            <i>→</i>
+            <strong>∞</strong>
+            <span>KONEKTIVITAS<br />GLOBAL</span>
+          </div>
+        </div>
+        <div class="industry-footer">
+          <span>SUNGAI BRANTAS TIDAK PERNAH MENJADI PEMISAH</span>
+          <button class="source-trigger" type="button" data-source="modern">BACA CATATAN MODERN <i>↗</i></button>
+        </div>
+      </section>
+
+      <!-- Section: Interactive Heritage Map Explorer -->
+      <section class="feature-full-section" id="section-heritage-map">
+        <div id="map-explorer-root"></div>
+      </section>
+
+      <!-- Section: Digital Archive & Artifact Vault -->
+      <section class="feature-full-section section-dark" id="section-archive-vault">
+        <div id="archive-vault-root"></div>
+      </section>
+
+      <!-- Section: Curator Quiz & Certificate Challenge -->
+      <section class="feature-full-section" id="section-curator-quiz">
+        <div id="quiz-module-root"></div>
+      </section>
+
+      <!-- Epilogue Section -->
+      <section class="epilogue" id="epilogue">
+        <div class="epilogue-water"></div>
+        <div class="epilogue-content">
+          <p class="eyebrow">EPILOG / SIKLUS YANG TAK PERNAH PADAM</p>
+          <h2>YANG MENGALIR<br /><i>AKAN SELALU DIINGAT</i></h2>
+          <p>Di muara akhir perjalanan ini, Sungai Brantas bukan sekadar bentang alam. Ia adalah saksi bisu yang mengikat sabda raja, deru pertempuran, keringat buruh pabrik, keheningan doa rumah ibadah, hingga sayap pesawat yang melintas di langit Dhoho.</p>
+          <a class="return-link" href="#top">
+            <span>KEMBALI KE AWAL</span>
+            <i>↑</i>
+          </a>
+        </div>
+        <div class="epilogue-coordinates">KEDIRI / BRANTAS / CONTINUUM</div>
+        <svg class="epilogue-river" viewBox="0 0 1400 400" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <filter id="ripple-filter">
+              <feTurbulence type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="2" seed="4" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="18" xChannelSelector="R" yChannelSelector="B"/>
+            </filter>
+          </defs>
+          <path d="M-80 210 C180 76 300 355 520 182 S860 82 1080 236 S1280 270 1480 140" filter="url(#ripple-filter)"/>
+        </svg>
+      </section>
+
+      <!-- Site Footer -->
+      <footer class="site-footer">
+        <div class="footer-brand">
+          KEDIRI <span>/</span> ARSIP SINEMATIK
+        </div>
+        <p>Digital museum concept. Dibangun dengan data terstruktur, SVG procedural, Web Audio API, GSAP, dan arsip sejarah terverifikasi.</p>
+        <div class="footer-meta">
+          <span>JAWA TIMUR</span>
+          <span>1042 - 2026</span>
+          <button type="button" class="btn-footer-shortcuts" id="btn-footer-shortcuts">Bantuan Pintas (?)</button>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Source Notes Dialog -->
+    <dialog class="source-dialog" aria-labelledby="source-dialog-title">
+      <div class="dialog-inner">
+        <button class="dialog-close" type="button" aria-label="Tutup catatan sumber">×</button>
+        <p class="eyebrow">SOURCE NOTE</p>
+        <h2 id="source-dialog-title">Dibaca dengan hati-hati.</h2>
+        <p id="source-dialog-copy"></p>
+        <div id="source-dialog-links" class="source-links"></div>
+      </div>
+    </dialog>
+
+    <!-- Keyboard Shortcuts Help Dialog -->
+    <dialog class="shortcuts-dialog" id="shortcuts-dialog" aria-labelledby="shortcuts-dialog-title">
+      <div class="dialog-inner">
+        <button class="dialog-close" type="button" aria-label="Tutup panduan tombol pintas">×</button>
+        <p class="eyebrow">KEYBOARD SHORTCUTS</p>
+        <h2 id="shortcuts-dialog-title">Navigasi Pintas</h2>
+        <div class="shortcuts-grid">
+          <div class="shortcut-item"><kbd>M</kbd> <span>Buka / Tutup Suara Ambien (Audio)</span></div>
+          <div class="shortcut-item"><kbd>L</kbd> <span>Ganti Bahasa (ID / EN)</span></div>
+          <div class="shortcut-item"><kbd>P</kbd> <span>Loncat ke Peta Cagar Budaya</span></div>
+          <div class="shortcut-item"><kbd>A</kbd> <span>Loncat ke Galeri Arsip</span></div>
+          <div class="shortcut-item"><kbd>Q</kbd> <span>Loncat ke Uji Kuis Kurator</span></div>
+          <div class="shortcut-item"><kbd>Home</kbd> <span>Kembali ke Puncak (Hero)</span></div>
+          <div class="shortcut-item"><kbd>?</kbd> <span>Buka Dialog Pintas Ini</span></div>
+          <div class="shortcut-item"><kbd>Esc</kbd> <span>Tutup Semua Modal / Dialog</span></div>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
