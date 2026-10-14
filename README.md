@@ -8,7 +8,7 @@
 
 **Perjalanan sinematik menembus kerajaan Panjalu, Sungai Brantas, arsip kolonial, dan ingatan masa depan.** ✨
 
-[Quickstart](docs/quickstart.md) · [Folder map](docs/folder-map.md) · [Contributing](CONTRIBUTING.md)
+[Quickstart](docs/quickstart.md) · [Folder map](docs/folder-map.md) · [Workspace index](docs/monorepo-index.md) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -21,7 +21,7 @@ Museum digital interaktif: linimasa bab per bab, peta situs warisan, brankas ars
 ## 🛠 Instalasi
 
 ```bash
-git clone https://github.com/drnovia/kediri-cinematic-history.git
+git clone https://github.com/drnovia/Kediri-Cinematic-History.git
 cd kediri-cinematic-history
 npm install
 ```
